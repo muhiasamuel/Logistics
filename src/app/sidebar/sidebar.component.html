@@ -1,0 +1,47 @@
+
+<div class="sidebar-wrapper bg-dark">
+  <div class="logo">
+    <a href="" class="simple-text logo-mini">
+      <div class="logo-image-small">
+        <img src="assets/img/angular2-logo.png">
+      </div>
+    </a>
+    <a href="" class="simple-text logo-normal">
+        TELLER AUTOMATION
+    </a>
+  </div>
+    <ul class="nav" >
+        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
+            <a [routerLink]="[menuItem.path]">
+                <i class="nc-icon {{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>  
+    </ul>
+</div>
+<!-- <mat-nav-list style="background-color: white;" class="nav bg-white">
+  <mat-list-item routerLink="#">
+      <mat-icon style="color: grey;">dashboard</mat-icon><span>Dashboard</span>
+  </mat-list-item>
+  <mat-expansion-panel [class.mat-elevation-z0]="true">
+      <mat-expansion-panel-header>
+          Mobile Phone
+      </mat-expansion-panel-header>
+      <mat-nav-list *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
+          <a [routerLink]="[menuItem.path]">
+              <i class="nc-icon {{menuItem.icon}}"></i>
+              <p>{{menuItem.title}}</p>
+          </a>
+      </mat-nav-list>
+  </mat-expansion-panel>
+  <mat-expansion-panel [class.mat-elevation-z0]="true">
+      <mat-expansion-panel-header>
+          Frameworks
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+          <a mat-list-item routerLink="#">Spring</a>
+          <a mat-list-item routerLink="#">Hibernate</a>
+          <a mat-list-item routerLink="#">Struts</a>
+      </mat-nav-list>
+  </mat-expansion-panel>
+</mat-nav-list>    -->
